@@ -7,14 +7,16 @@ var submitContacts = () => {
 		event.preventDefault();
 		var name = $('#contact-name');
 		var	phone = $('#contact-phone');
+		var error = $('#error');
 		var html = contactItem(name.val(), phone.val());
 
-		if(!$.isNumeric(phone.val())){
-			phone.val('only numbers');
+		if(!$.isNumeric(phone.val()) || name.val() === ''){
+			error.text('Error');
 		}else {
 			$('#contact-list').append(html);
 			name.val('');
 			phone.val('');
+			error.text('');
 		}
 	});
 };
