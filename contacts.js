@@ -9,10 +9,13 @@ var submitContacts = () => {
 		var	phone = $('#contact-phone');
 		var html = contactItem(name.val(), phone.val());
 
-		$('#contact-list').append(html);
-		name.val('');
-		phone.val('');
-
+		if(!$.isNumeric(phone.val())){
+			phone.val('only numbers');
+		}else {
+			$('#contact-list').append(html);
+			name.val('');
+			phone.val('');
+		}
 	});
 };
 
