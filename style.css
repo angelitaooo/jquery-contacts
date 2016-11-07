@@ -4,6 +4,6 @@ form {
 
 #contact-list {
 	list-style-type: none;
-    margin-left: -3.75rem;
     font-size: 20px;
+    text-align: center;
 }
