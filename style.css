@@ -1,0 +1,9 @@
+form {
+	padding-top: 100px;
+}
+
+#contact-list {
+	list-style-type: none;
+    font-size: 20px;
+    text-align: center;
+}
