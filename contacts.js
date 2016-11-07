@@ -10,6 +10,10 @@ var submitContacts = () => {
 		var html = contactItem(name, phone);
 
 		$('#contact-list').append(html);
+		$('#contact-name').val('');
+		$('#contact-phone').val('');
+
+		return false;
 
 	});
 };
